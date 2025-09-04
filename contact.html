@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Apex</title>
 </head>
+<body style="margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f9fafb; color: #212529;">
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
+  <!-- Header -->
+  <header style="background-color: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 24px 40px;">
+    <h1 style="margin: 0; font-size: 28px; letter-spacing: 0.5px;">Apex</h1>
+    <nav style="margin-top: 10px;">
+      <a href="index.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Home</a>
+      <a href="about.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">About</a>
+      <a href="services.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Services</a>
+      <a href="contact.html" style="color: #212529; font-weight: bold; text-decoration: underline;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(to right, #0d6efd, #6610f2); color: white; padding: 60px 40px; text-align: center;">
+    <h2 style="font-size: 36px; margin-bottom: 10px; letter-spacing: 1px;">Let’s Build Something Together</h2>
+    <p style="font-size: 18px; max-width: 700px; margin: auto;">
+      Whether you’re launching a startup, scaling a brand, or just exploring ideas — we’re here to connect, collaborate, and create.
+    </p>
+  </section>
+
+  <!-- Divider -->
+  <div style="height: 4px; background-color: #0d6efd; width: 80px; margin: 40px auto; border-radius: 2px;"></div>
+
+  <!-- Main Section -->
+  <main style="max-width: 960px; margin: 40px auto; background-color: #ffffff; padding: 60px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 40px; animation: fadeIn 1s ease-in-out;">
+
+    <!-- Info Section -->
+    <section style="flex: 1 1 380px;">
+      <h3 style="font-size: 24px; margin-bottom: 20px;">Contact Info</h3>
+      <p style="font-size: 16px; line-height: 1.6; color: #495057; margin-bottom: 30px;">
+        We respond to every message. No bots. No delays. Just real people ready to talk.
+      </p>
+      <div style="font-size: 15px; line-height: 1.8;">
+        <p><strong>Email:</strong> hello@apexstudio.com</p>
+        <p><strong>Phone:</strong> +234 801 234 5678</p>
+        <p><strong>Location:</strong> Victoria Island, Lagos</p>
+        <div style="margin-top: 20px;">
+          <a href="#" style="margin-right: 15px; text-decoration: none; color: #0d6efd; transition: color 0.3s;">Facebook</a>
+          <a href="#" style="margin-right: 15px; text-decoration: none; color: #0d6efd; transition: color 0.3s;">Instagram</a>
+          <a href="#" style="text-decoration: none; color: #0d6efd; transition: color 0.3s;">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section style="flex: 1 1 500px;">
+      <form action="contact.php" method="POST">
+        <label for="name" style="display: block; font-weight: 600; margin-bottom: 6px;">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Jane Doe" style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+
+        <label for="email" style="display: block; font-weight: 600; margin-bottom: 6px;">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+
+        <label for="subject" style="display: block; font-weight: 600; margin-bottom: 6px;">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Your inquiry..." style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+
+        <label for="message" style="display: block; font-weight: 600; margin-bottom: 6px;">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..." style="width: 100%; padding: 14px; margin-bottom: 30px; border: 1px solid #ced4da; border-radius: 6px;"></textarea>
+
+        <button type="submit" style="background-color: #0d6efd; color: #fff; padding: 14px 28px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 30px 0; font-size: 14px; color: #6c757d;">
+    &copy; 2025 Apex Studio. Built with clarity, precision, and Lagos energy.
+  </footer>
+
+  <!-- Animation -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    h1 {
-        color: #333;
+    a:hover {
+      color: #6610f2 !important;
     }
-</style>
-<body>
-    <h1>Contact Us</h1>
-    <p>If you have any questions, feel free to reach out to us at</p> >
+    button:hover {
+      background-color: #0056b3 !important;
+    }
+  </style>
+
 </body>
 </html>
