@@ -4,93 +4,281 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Apex</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --secondary: #6610f2;
+      --text: #212529;
+      --muted: #6c757d;
+      --bg: #f9fafb;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--white);
+      border-bottom: 1px solid #e0e0e0;
+      padding: 24px 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      animation: bounceIn 1s ease;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    nav a.active {
+      color: var(--text);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .marquee {
+      background-color: var(--primary);
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollLeft 15s linear infinite;
+    }
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    section.hero {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    section.hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    section.hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .divider {
+      height: 4px;
+      background-color: var(--primary);
+      width: 80px;
+      margin: 40px auto;
+      border-radius: 2px;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      background-color: var(--white);
+      padding: 60px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    section.info, section.form {
+      flex: 1 1 400px;
+    }
+
+    section.info h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    section.info p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #495057;
+      margin-bottom: 30px;
+    }
+
+    section.info div p {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    section.info div a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    section.info div a:hover {
+      transform: scale(1.1);
+      color: var(--secondary);
+    }
+
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    }
+
+    form button {
+      background-color: var(--primary);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 30px;
+      }
+      section.hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
-<body style="margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f9fafb; color: #212529;">
+<body>
+
+  <!-- Marquee Banner -->
+  <div class="marquee">
+    <span>🚀 Welcome to Apex Studio — Let’s connect, collaborate, and create something legendary!</span>
+  </div>
 
   <!-- Header -->
-  <header style="background-color: #ffffff; border-bottom: 1px solid #e0e0e0; padding: 24px 40px;">
-    <h1 style="margin: 0; font-size: 28px; letter-spacing: 0.5px;">Apex</h1>
-    <nav style="margin-top: 10px;">
-      <a href="index.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Home</a>
-      <a href="gallery.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Gallery</a>
-      <a href="wisdom.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Wisdom</a>
-      <a href="signup.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Signup</a>
-      <a href="login.html" style="margin-right: 20px; color: #0d6efd; text-decoration: none; transition: color 0.3s;">Login</a>
-      <a href="contact.html" style="color: #212529; font-weight: bold; text-decoration: underline;">Contact</a>
+  <header>
+    <h1>Apex</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="wisdom.html">Wisdom</a>
+      <a href="signup.html">Signup</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section style="background: linear-gradient(to right, #0d6efd, #6610f2); color: white; padding: 60px 40px; text-align: center;">
-    <h2 style="font-size: 36px; margin-bottom: 10px; letter-spacing: 1px;">Let’s Build Something Together</h2>
-    <p style="font-size: 18px; max-width: 700px; margin: auto;">
-      Whether you’re launching a startup, scaling a brand, or just exploring ideas — we’re here to connect, collaborate, and create.
-    </p>
+  <section class="hero">
+    <h2>Let’s Build Something Together</h2>
+    <p>Whether you’re launching a startup, scaling a brand, or just exploring ideas — we’re here to connect, collaborate, and create.</p>
   </section>
 
   <!-- Divider -->
-  <div style="height: 4px; background-color: #0d6efd; width: 80px; margin: 40px auto; border-radius: 2px;"></div>
+  <div class="divider"></div>
 
   <!-- Main Section -->
-  <main style="max-width: 960px; margin: 40px auto; background-color: #ffffff; padding: 60px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 40px; animation: fadeIn 1s ease-in-out;">
-
+  <main>
     <!-- Info Section -->
-    <section style="flex: 1 1 380px;">
-      <h3 style="font-size: 24px; margin-bottom: 20px;">Contact Info</h3>
-      <p style="font-size: 16px; line-height: 1.6; color: #495057; margin-bottom: 30px;">
-        We respond to every message. No bots. No delays. Just real people ready to talk.
-      </p>
-      <div style="font-size: 15px; line-height: 1.8;">
+    <section class="info">
+      <h3>Contact Info</h3>
+      <p>We respond to every message. No bots. No delays. Just real people ready to talk.</p>
+      <div>
         <p><strong>Email:</strong> hello@apexstudio.com</p>
         <p><strong>Phone:</strong> +234 801 234 5678</p>
         <p><strong>Location:</strong> Victoria Island, Lagos</p>
         <div style="margin-top: 20px;">
-          <a href="#" style="margin-right: 15px; text-decoration: none; color: #0d6efd; transition: color 0.3s;">Facebook</a>
-          <a href="#" style="margin-right: 15px; text-decoration: none; color: #0d6efd; transition: color 0.3s;">Instagram</a>
-          <a href="#" style="text-decoration: none; color: #0d6efd; transition: color 0.3s;">LinkedIn</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
         </div>
       </div>
     </section>
 
     <!-- Form Section -->
-    <section style="flex: 1 1 500px;">
-      <form action="contact.php" method="POST">
-        <label for="name" style="display: block; font-weight: 600; margin-bottom: 6px;">Full Name</label>
-        <input type="text" id="name" name="name" required placeholder="Jane Doe" style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+    <section class="form">
+      <form action="contact.php" method="POST" aria-label="Contact Form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe" />
 
-        <label for="email" style="display: block; font-weight: 600; margin-bottom: 6px;">Email Address</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com" style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
 
-        <label for="subject" style="display: block; font-weight: 600; margin-bottom: 6px;">Subject</label>
-        <input type="text" id="subject" name="subject" required placeholder="Your inquiry..." style="width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ced4da; border-radius: 6px;" />
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Your inquiry..." />
 
-        <label for="message" style="display: block; font-weight: 600; margin-bottom: 6px;">Message</label>
-        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..." style="width: 100%; padding: 14px; margin-bottom: 30px; border: 1px solid #ced4da; border-radius: 6px;"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
 
-        <button type="submit" style="background-color: #0d6efd; color: #fff; padding: 14px 28px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">Send Message</button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
-
   </main>
 
   <!-- Footer -->
-  <footer style="text-align: center; padding: 30px 0; font-size: 14px; color: #6c757d;">
-    &copy; 2025 Apex Studio. Built with clarity, precision, and Lagos energy.
-  </footer>
-
-  <!-- Animation -->
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    a:hover {
-      color: #6610f2 !important;
-    }
-    button:hover {
-      background-color: #0056b3 !important;
-    }
-  </style>
-
-</body>
-</html>
+  <footer>
