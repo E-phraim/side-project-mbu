@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collaborator Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; background: linear-gradient(to right, #e0eafc, #cfdef3); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+  <!-- Login Container -->
+  <div style="display: flex; justify-content: center; align-items: center; height: 90vh;">
+    <div style="background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px;">
+
+      <!-- Header -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <img src="https://via.placeholder.com/80" alt="Logo" style="border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+        <h2 style="margin-top: 15px; font-size: 24px; color: #333;">Collaborator Login</h2>
+        <p style="color: #666; font-size: 14px;">Secure access to your team dashboard</p>
+      </div>
+
+      <!-- Form -->
+      <form method="post" action="/login">
+        <label for="email" style="display: block; margin-bottom: 6px; color: #444; font-weight: 600;">Email Address</label>
+        <input type="email" id="email" name="email" required
+               style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+
+        <label for="password" style="display: block; margin-bottom: 6px; color: #444; font-weight: 600;">Password</label>
+        <input type="password" id="password" name="password" required
+               style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <label style="font-size: 13px; color: #555;">
+            <input type="checkbox" name="remember" style="margin-right: 6px;"> Remember me
+          </label>
+          <a href="/forgot-password" style="font-size: 13px; color: #007bff; text-decoration: none;">Forgot password?</a>
+        </div>
+
+        <button type="submit"
+                style="width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer;">
+          Sign In
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 25px; font-size: 13px; color: #666;">
+        Need access? <a href="/request-access" style="color: #007bff; text-decoration: none;">Request collaborator access</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Marquee -->
+  <div style="background-color: #007bff; color: white; padding: 12px 0; position: fixed; bottom: 0; width: 100%;">
+    <div style="overflow: hidden; white-space: nowrap;">
+      <div style="display: inline-block; padding-left: 100%; animation: scroll-left 15s linear infinite; font-size: 14px;">
+        🙏 Thank you for being a valued collaborator. Your contributions drive our success. Stay awesome, George!
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline CSS Animation -->
+  <style>
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+
+</body>
+</html>
