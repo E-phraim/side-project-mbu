@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisdom's Login Page</title>
+    <title>Tranzil login page</title>
     <style>
       body {
         margin: 0;
@@ -74,12 +74,52 @@
   </head>
   <body>
     <div class="login-box">
-      <h2>Wisdom's Login</h2>
+      <marquee
+        behavior="scroll"
+        direction="left"
+        style="color: #00ffff; margin-bottom: 20px"
+      >
+        Welcome to Tranzil! | Enjoy seamless login experience | Contact us for
+        support
+      </marquee>
+      <h2>Tranzil login page</h2>
       <form>
         <input type="text" placeholder="Username" required />
         <input type="password" placeholder="Password" required />
-        <button type="submit"> <a href="https://www.facebook.com">Login with Facebook</a></button>
+        <button type="submit">
+          <a href="contact.html">Login</a>
+        </button>
       </form>
+      <p style="color: #888; margin-top: 20px">
+        Don't have an account? <a href="signup.html" style="color: #00ffff">Sign Up</a>
+      </p>
+      <div class="login-links">
+        <a href="contact.html">Contact Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="perculiar.html">Perculiar</a>
+      </div>
+      <!-- ...existing code... -->
+      <style>
+        /* ...existing styles... */
+        .login-links {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 20px;
+        }
+        .login-links a {
+          color: #00ffff;
+          text-decoration: none;
+          font-size: 16px;
+          transition: color 0.2s;
+        }
+        .login-links a:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      </style>
+      <!-- ...existing code... -->
+       
     </div>
   </body>
 </html>
